@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Laura Laane Portfolio Website</title>
+		<link rel="icon" href="img/icon.png" />
+		<!-- stylesheet for normalizing the styles, so the page looks the same on different browsers -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+		<!-- font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+			integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+			crossorigin="anonymous"
+		/>
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet" />
+		<!-- AOS -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<!-- custom css -->
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<a href="#home">
+					<img src="img/logo_transparent.png" alt="" />
+				</a>
+			</div>
+			<button class="nav-toggle" aria-label="toggle navigation">
+				<span class="hamburger"></span>
+			</button>
+			<nav class="nav">
+				<ul class="nav__list">
+					<!-- BEM naming system, using doubleunderscore __ which shows that list is sub-component of nav  -->
+					<li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+					<li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+					<li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+					<li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--* introduction -->
+		<section data-aos="fade-up" class="intro" id="home">
+			<!--BEM, using -- to distinguish that its a modifyer class -->
+			<h1 class="section__title section__title--intro">Hey, I am <strong>Laura Laane</strong></h1>
+			<p class="section__subtitle section__subtitle--intro">front-end dev</p>
+			<img data-aos="zoom-in" src="img/laura-01.jpg" alt="a picture of Laura with sunglasses" class="intro__img" />
+		</section>
+
+		<!--* My Services -->
+		<section class="my-services" id="services">
+			<h2 class="section__title section__title--services">What I do</h2>
+			<div data-aos="zoom-in" class="services">
+				<div class="service">
+					<h3>Front-end development</h3>
+					<p>Creating beautiful and responsive websites and web applications.</p>
+				</div>
+				<!-- / service -->
+			</div>
+			<!-- / services -->
+
+			<a href="#work" class="btn">My Work</a>
+		</section>
+
+		<!--* About me -->
+		<section data-aos="fade-right" class="about-me" id="about">
+			<h2 class="section__title section__title--about">Who I am</h2>
+			<p class="section__subtitle section__subtitle--about">Web Developer based out of Estonia</p>
+			<div class="about-me__body">
+				<p>
+					Born and raised in South-Estonia. In the past I have got IT systems administration bachelor's degree in 2016,
+					travelled and lived in Europe and Canada, worked few years as technical customer support for worldwide online
+					betting companies and now have found web development for myself.
+				</p>
+				<p>
+					I´m an aspiring web developer, currently focusing on front-end and improving my knowledge of React and
+					Javascript from various online courses, with the future goal to learn back-end also. I like to learn and
+					experience new things and be surrounded by people from who to learn something.
+				</p>
+			</div>
+			<img src="img/laura-02.jpg" alt="Laura making ballet pose" class="about-me__img" />
+		</section>
+
+		<!--* My Work -->
+		<section class="my-work" id="work">
+			<h2 class="section__title section__title--work">My work</h2>
+			<p class="section__subtitle section__subtitle--work">A selection of my previous projects</p>
+			<!-- Portfolio item 01 -->
+			<div class="portfolio">
+				<div class="column">
+					<a href="https://lalaane.github.io/Robofriends/" target="_blank">
+						<img data-aos="fade-down-right" src="img/portfolio-01.PNG" alt="robo friend" class="column__img" />
+					</a>
+				</div>
+				<div class="column">
+					<h3 class="portfolio__item">Robofriends grid</h3>
+					<div class="column__text">
+						<p>
+							Project for learning about React, how to fetch information from external API and show it on the page in a
+							grid like layout.
+						</p>
+						<p>
+							<a href="https://lalaane.github.io/Robofriends/" target="_blank">
+								<button class="btn">Live</button>
+							</a>
+							<a href="https://github.com/lalaane/robofriends" target="_blank">
+								<button class="btn">Code</button>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- / Portfolio item -->
+			<!-- Portfolio item 02 -->
+			<div class="portfolio">
+				<div class="column">
+					<a href="https://lalaane-catch-of-the-day.netlify.app/" target="_blank">
+						<img
+							data-aos="fade-up-right"
+							src="img/portfolio-02.PNG"
+							alt="catch of the day screenshot"
+							class="column__img"
+						/>
+					</a>
+				</div>
+				<div class="column">
+					<h3 class="portfolio__item">Catch of the Day</h3>
+					<div class="column__text">
+						<p>
+							Project for learning React basics like components and fetching data with API. Connecting app with Google
+							FireBase.
+						</p>
+						<p>
+							<a href="https://lalaane-catch-of-the-day.netlify.app/" target="_blank">
+								<button class="btn">Live</button>
+							</a>
+							<a href="https://github.com/lalaane/catch-of-the-day" target="_blank">
+								<button class="btn">Code</button>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- / Portfolio item -->
+			<!-- Portfolio item 03 -->
+			<div class="portfolio">
+				<div class="column">
+					<a href="https://mathificent.netlify.app/" target="_blank">
+						<img data-aos="fade-down-right" src="img/portfolio-03.PNG" alt="Mathificent app" class="column__img" />
+					</a>
+				</div>
+				<div class="column">
+					<h3 class="portfolio__item">Mathificent</h3>
+					<div class="column__text">
+						<p>
+							Another beginner level React app for learning about React components and hooks like useState and
+							useEffect.
+						</p>
+						<p>
+							<a href="https://mathificent.netlify.app/" target="_blank">
+								<button class="btn">Live</button>
+							</a>
+							<a href="https://github.com/lalaane/mathificent" target="_blank">
+								<button class="btn">Code</button>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- / Portfolio item -->
+			<!-- Portfolio item 04 -->
+			<div class="portfolio">
+				<div class="column">
+					<a href="https://lalaane.github.io/memegenerator/" target="_blank">
+						<img data-aos="fade-up-right" src="img/portfolio-04.PNG" alt="Meme Generator" class="column__img" />
+					</a>
+				</div>
+				<div class="column">
+					<h3 class="portfolio__item">Meme Generator</h3>
+					<div class="column__text">
+						<p>
+							React app created by following along Scrimba.com tutorial by Bob Ziroll where I got to practice creating
+							components, react props, lifecycle methods.
+						</p>
+						<p>
+							<a href="https://lalaane.github.io/memegenerator/" target="_blank">
+								<button class="btn">Live</button>
+							</a>
+							<a href="https://github.com/lalaane/memegenerator" target="_blank">
+								<button class="btn">Code</button>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- / Portfolio item -->
+			<!-- Portfolio item 05 -->
+			<div class="portfolio">
+				<div class="column">
+					<a href="https://lalaane.github.io/basic-tetris/" target="_blank">
+						<img data-aos="fade-down-right" src="img/portfolio-05.PNG" alt="Basic tetris game" class="column__img" />
+					</a>
+				</div>
+				<div class="column">
+					<h3 class="portfolio__item">Basic Tetris</h3>
+					<div class="column__text">
+						<p>Basic game of Tetris created with Javascript.</p>
+						<p>
+							<a href="https://lalaane.github.io/basic-tetris/" target="_blank">
+								<button class="btn">Live</button>
+							</a>
+							<a href="https://github.com/lalaane/basic-tetris" target="_blank">
+								<button class="btn">Code</button>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- / Portfolio item -->
+			<!-- Portfolio item 06 -->
+			<div class="portfolio">
+				<div class="column">
+					<a href="https://lalaane.github.io/basic-tetris/" target="_blank">
+						<img data-aos="fade-up-right" src="img/portfolio-06.PNG" alt="Color game" class="column__img" />
+					</a>
+				</div>
+				<div class="column">
+					<h3 class="portfolio__item">Color game</h3>
+					<div class="column__text">
+						<p>Game for guessing which color is the correct one based on RGB value. Created with Javascript.</p>
+						<p>
+							<a href="https://lalaane.github.io/colorgame/" target="_blank">
+								<button class="btn">Live</button>
+							</a>
+							<a href="https://github.com/lalaane/colorgame" target="_blank">
+								<button class="btn">Code</button>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- / Portfolio item -->
+		</section>
+		<a class="arrow" href="#top">&#11165;</a>
+		<!--* Footer -->
+		<footer class="footer">
+			<a href="mailto:laura.laane@gmail.com" class="footer__link">Let's talk!</a>
+
+			<ul class="social-list">
+				<li class="social-list__item">
+					<a href="https://www.linkedin.com/in/laura-laane/" class="social-list__link" target="_blank"
+						><i class="fab fa-linkedin"></i
+					></a>
+				</li>
+				<li class="social-list__item">
+					<a href="https://github.com/lalaane" class="social-list__link" target="_blank"
+						><i class="fab fa-github"></i
+					></a>
+				</li>
+				<li class="social-list__item">
+					<a href="https://codepen.io/LaLaane" class="social-list__link" target="_blank"
+						><i class="fab fa-codepen"></i
+					></a>
+				</li>
+				<li class="social-list__item">
+					<a href="https://twitter.com/la_laane" class="social-list__link" target="_blank"
+						><i class="fab fa-twitter"></i
+					></a>
+				</li>
+			</ul>
+		</footer>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
