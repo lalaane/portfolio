@@ -497,6 +497,10 @@ header {
 	padding: 0.7em;
 }
 
+.social-list__moved {
+	margin-top: -0.1em;
+}
+
 .arrow {
 	opacity: 0;
 	margin-right: 1em;
