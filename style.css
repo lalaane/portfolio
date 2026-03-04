@@ -103,6 +103,8 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: var(--text-light);
+  position: relative;
+  transition: opacity 0.25s ease;
 
   &:hover {
     padding-bottom: 5px;
@@ -112,6 +114,12 @@ nav ul li a {
 
 nav.active {
   transform: translateX(0);
+}
+
+nav ul li a.nav-active {
+  padding-bottom: 5px;
+  border-bottom: 5px solid var(--text-light);
+  opacity: 1;
 }
 
 /* Home Section --------------------------- */
@@ -194,6 +202,8 @@ nav.active {
   border-radius: 60px;
   position: absolute;
   bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .mouse::before {
@@ -223,6 +233,30 @@ nav.active {
   display: grid;
   place-items: center;
   padding: 60px 0 80px;
+}
+
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 1.2rem 0;
+  padding: 10px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.9);
+  }
 }
 
 .about-grid {

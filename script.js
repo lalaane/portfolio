@@ -37,6 +37,36 @@
 })();
 
 // -------------------------------------------------------
+// Scroll Spy — highlight active nav link as user scrolls
+// -------------------------------------------------------
+(function () {
+  const sections = document.querySelectorAll("main section[id]");
+  const navLinks = document.querySelectorAll("nav a[href^='#']");
+
+  function onScroll() {
+    const scrollY = window.scrollY;
+    let currentId = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 120; // offset for fixed header
+      if (scrollY >= sectionTop) {
+        currentId = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.toggle(
+        "nav-active",
+        link.getAttribute("href") === `#${currentId}`
+      );
+    });
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll(); // run once on load
+})();
+
+// -------------------------------------------------------
 // Category cards — overlay emerges from hovered card
 // -------------------------------------------------------
 (function () {
