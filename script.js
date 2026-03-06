@@ -57,7 +57,7 @@
     navLinks.forEach((link) => {
       link.classList.toggle(
         "nav-active",
-        link.getAttribute("href") === `#${currentId}`
+        link.getAttribute("href") === `#${currentId}`,
       );
     });
   }
@@ -205,10 +205,45 @@
 // -------------------------------------------------------
 // Banner
 // -------------------------------------------------------
+// -------------------------------------------------------
+// Banner
+// -------------------------------------------------------
 const bannerContent = document.getElementById("bannerContent");
-const messageHTML =
-  '<span class="contact-message">Get in touch at laura.laane@gmail.com \u2014 Let\'s build something great together! \u2736 </span>';
+const email = "laura.laane@gmail.com";
+const messageHTML = `<span class="contact-message">Get in touch at ${email} — Let's build something great together! ✶ </span>`;
 bannerContent.innerHTML = messageHTML.repeat(20);
+
+// Tooltip element
+const tooltip = document.createElement("div");
+tooltip.id = "copy-tooltip";
+tooltip.textContent = "E-mail copied to clipboard!";
+tooltip.style.cssText = `
+  position: fixed;
+  background: #333;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 9999;
+`;
+document.body.appendChild(tooltip);
+
+let tooltipTimeout;
+bannerContent.parentElement.style.cursor = "pointer";
+bannerContent.parentElement.addEventListener("click", (e) => {
+  navigator.clipboard.writeText(email).then(() => {
+    tooltip.style.left = `${e.clientX + 12}px`;
+    tooltip.style.top = `${e.clientY + 12}px`;
+    tooltip.style.opacity = "1";
+    clearTimeout(tooltipTimeout);
+    tooltipTimeout = setTimeout(() => {
+      tooltip.style.opacity = "0";
+    }, 2000);
+  });
+});
 
 // -------------------------------------------------------
 // Copyright year
